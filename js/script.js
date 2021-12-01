@@ -2,33 +2,30 @@ $('.play').click(function(){
 
   let shootValue = $('.input').val() 
   let userChoice;
-  let computerChoice
+  let computerChoice;
   let randomNumber;
-  
+  let choices = Math.ceil(Math.random() * 6);
   $(".userChoice").text(shootValue)
   
   $(".computerChoice").text(shootValue)
   if(randomNumber === 1) {
 	computerChoice = 'rock';
-  
-}
-
-if(randomNumber === 2) {
+    $(".message").text("nice try");
+  }
+  if(randomNumber === 2) {
 	computerChoice = 'paper';
-  
-}
-
-if(randomNumber === 3) {
+  }
+  if (randomNumber === 3) {
 	computerChoice = 'scissors';
-}
-  if(randomNumber === 3) {
-  userChoice = "scissors";
   }
-  else if(randomNumber === 2){
-  userChoice = "paper"
+  if (randomNumber === 4) {
+	userChoice = 'rock';
   }
-  else{
-    userChoice = "rock"
+  if(randomNumber === 5) {
+	userChoice = 'paper';
   }
-  
+  if(randomNumber === 6) {
+	userChoice = 'scissors';
+  }
 })
+
