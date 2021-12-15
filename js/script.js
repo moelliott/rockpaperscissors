@@ -1,31 +1,19 @@
-$('.play').click(function(){
+$(".play").click(function() {
+  let userChoice = $(".input").val();
 
-  let shootValue = $('.input').val() 
-  let userChoice;
-  let computerChoice;
-  let randomNumber;
-  let choices = Math.ceil(Math.random() * 6);
-  $(".userChoice").text(shootValue)
-  
-  $(".computerChoice").text(shootValue)
-  if(randomNumber === 1) {
-	computerChoice = 'rock';
-    $(".message").text("nice try");
-  }
-  if(randomNumber === 2) {
-	computerChoice = 'paper';
-  }
-  if (randomNumber === 3) {
-	computerChoice = 'scissors';
-  }
-  if (randomNumber === 4) {
-	userChoice = 'rock';
-  }
-  if(randomNumber === 5) {
-	userChoice = 'paper';
-  }
-  if(randomNumber === 6) {
-	userChoice = 'scissors';
-  }
-})
+  $(".userChoice").text(userChoice);
+  let randomNumber = Math.ceil(Math.random() * 3);
+  let computerChoice = randomNumber;
 
+  if (randomNumber === 2) {
+    computerChoice = "rock";
+    $(".result").text("Good job!");
+  } else if (randomNumber === 3) {
+    computerChoice = "paper";
+    $(".result").text("You won!");
+  } else if (randomNumber === 1) {
+    computerChoice = "scissors";
+    $(".result").text("Winner!");
+  }
+  $(".computerChoice").text(computerChoice);
+});
