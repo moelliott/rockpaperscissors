@@ -1,11 +1,9 @@
 $(".play").click(function () {
   let userChoice = $(".input").val();
-
-  $(".userChoice").text(userChoice);
   let computerChoice = getRandomComputerChoice();
   $(".computerChoice").text(computerChoice);
-
-  
+  $(".userChoice").text(userChoice);
+  chooseWinner(computerChoice, userChoice);
 });
 
 function getRandomComputerChoice() {
@@ -21,25 +19,28 @@ function getRandomComputerChoice() {
   return computerChoice;
 }
 
-function chooseWinner() {
-  
-  if (computerChoice === "scissors" && userChoice === "rock") {
+//let userChoice = $(".input").val();
+//let computerChoice = getRandomComputerChoice();
+//$(".computerChoice").text(computerChoice);
+//$(".userChoice").text(userChoice);
+function chooseWinner(computerChoice, userChoice) {
+  if (userChoice === "rock" && computerChoice === "scissors") {
     $(".result").text("Rock beats Scissors!");
-  } else if (computerChoice === "rock" && userChoice === "paper") {
+  } else if (userChoice === "paper" && computerChoice === "rock") {
     $(".result").text("Paper covers Rock!");
-  } else if (computerChoice === "paper" && userChoice === "scissors") {
+  } else if (userChoice === "scissors" && computerChoice === "paper") {
     $(".result").text("Scissors cuts Paper!");
-  } else if (computerChoice === "paper" && userChoice === "rock") {
+  } else if (userChoice === "rock" && computerChoice === "paper") {
     $(".result").text("Paper covers Rock!");
-  } else if (computerChoice === "rock" && userChoice === "paper") {
-    $(".result").text("Paper covers Rock!");
-  } else if (computerChoice === "rock" && userChoice === "scissors") {
+  } else if (userChoice === "paper" && computerChoice === "scissors") {
+    $(".result").text("Paper covers Scissors!");
+  } else if (userChoice === "scissors" && computerChoice === "rock") {
     $(".result").text("Rock beats Scissors!");
-  } else if (computerChoice === "rock" && userChoice === "rock") {
-    $(".result").text("Tie! Rock v Rock");
-  } else if (computerChoice === "paper" && userChoice === "paper") {
-    $(".result").text("Tie! Paper v Paper");
-  } else if (computerChoice === "scissors" && userChoice === "scissors") {
-    $(".result").text("Tie! Scissors v Scissors");
+  } else if (userChoice === "rock" && computerChoice === "rock") {
+    $(".result").text("Tie! Rock versus Rock");
+  } else if (userChoice === "paper" && computerChoice === "paper") {
+    $(".result").text("Tie! Paper versus Paper");
+  } else if (userChoice === "scissors" && computerChoice === "scissors") {
+    $(".result").text("Tie! Scissors versus Scissors");
   }
 }
