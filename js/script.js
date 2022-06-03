@@ -33,7 +33,7 @@ function chooseWinner(computerChoice, userChoice) {
   } else if (userChoice === "rock" && computerChoice === "paper") {
     $(".result").text("Paper covers Rock!");
   } else if (userChoice === "paper" && computerChoice === "scissors") {
-    $(".result").text("Paper covers Scissors!");
+    $(".result").text("Scissors cuts Paper!");
   } else if (userChoice === "scissors" && computerChoice === "rock") {
     $(".result").text("Rock beats Scissors!");
   } else if (userChoice === "rock" && computerChoice === "rock") {
