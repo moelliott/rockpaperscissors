@@ -5,3 +5,38 @@
   display: flex;
   justify-content: space-between;
 }
+
+body {
+  background-image: linear-gradient(to top, #d4dcff, #a6b6ff, #9393db);
+}
+
+h1:hover {
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  background-color: #000000;
+}
+
+h3:hover{
+    font-family: 'Playfair Display', serif;
+    color: #fff000;
+    text-align: center;
+    background-color: #000000;
+}
+
+h4:hover{
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    text-align: center;
+    background-color: #000000;
+}
+img{
+  width: 350px;
+  height: 250px;
+}
+img:hover{
+  border: groove #6b89ff 10px;
+  padding: 4px;
+  margin: 4px;
+  background-color: #6e6e71
+}
